@@ -374,3 +374,175 @@ Set Theory
 Leap Year Logic
 
 These notes cover all the Python concepts discussed in this conversation in a structured interview-friendly format.
+>>>>>>>>>
+by deafault user data type in string 
+
+typcasting
+Type Casting in Python
+
+Type Casting means converting one data type into another data type.
+
+Why Type Casting?
+
+Sometimes data is in one format, but we need it in another.
+
+Example:
+
+x = "10"
+y = 20
+
+# Error:
+# print(x + y)
+
+Convert string to integer:
+
+x = int("10")
+y = 20
+
+print(x + y)
+
+Output:
+
+30
+Types of Type Casting
+1. Implicit Type Casting
+
+Python automatically converts one data type to another.
+
+a = 10
+b = 2.5
+
+c = a + b
+
+print(c)
+print(type(c))
+
+Output:
+
+12.5
+<class 'float'>
+
+Python automatically converts int to float.
+
+2. Explicit Type Casting
+
+The programmer manually converts the data type.
+
+int()
+x = "100"
+
+y = int(x)
+
+print(y)
+print(type(y))
+
+Output:
+
+100
+<class 'int'>
+float()
+x = "10.5"
+
+y = float(x)
+
+print(y)
+
+Output:
+
+10.5
+str()
+x = 100
+
+y = str(x)
+
+print(y)
+print(type(y))
+
+Output:
+
+100
+<class 'str'>
+bool()
+print(bool(1))
+print(bool(0))
+
+Output:
+
+True
+False
+list()
+name = "Python"
+
+print(list(name))
+
+Output:
+
+['P', 'y', 't', 'h', 'o', 'n']
+tuple()
+nums = [1, 2, 3]
+
+print(tuple(nums))
+
+Output:
+
+(1, 2, 3)
+set()
+nums = [1, 2, 2, 3]
+
+print(set(nums))
+
+Output:
+
+{1, 2, 3}
+dict()
+data = [('name', 'Amit'), ('age', 22)]
+
+print(dict(data))
+
+Output:
+
+{'name': 'Amit', 'age': 22}
+Common Examples
+User Input
+age = int(input("Enter Age: "))
+
+input() always returns a string, so we convert it to int.
+
+Float to Int
+x = 10.9
+
+print(int(x))
+
+Output:
+
+10
+
+Note: Decimal part is removed, not rounded.
+
+Quick Conversion Table
+Function	Converts To
+int()	Integer
+float()	Float
+str()	String
+bool()	Boolean
+list()	List
+tuple()	Tuple
+set()	Set
+dict()	Dictionary
+Interview Answer
+
+Type Casting is the process of converting a value from one data type to another. Python supports:
+
+Implicit Type Casting (automatic conversion by Python)
+Explicit Type Casting (manual conversion using functions like int(), float(), str(), etc.)
+
+Example:
+
+x = "10"
+y = int(x)
+
+print(y + 5)
+
+Output:
+
+15
