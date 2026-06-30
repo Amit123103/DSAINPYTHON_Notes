@@ -193,3 +193,25 @@ def delete_last(self):
         current = current.ref
     # Delete the last node
     current.ref = None
+    
+ # delteing in btw node   
+def delete_btw_node(self, value):
+
+    # If linked list is empty
+    if self.head:
+        print("Linked Empty")
+        return
+    # If first node contains the value
+    if self.head.data == value:
+        self.head = self.head.ref
+        return
+    current = self.head
+    # Search for the node before the node to delete
+    while current.ref:
+        if current.ref.data == value:
+            # Skip the node to be deleted
+            current.ref = current.ref.ref
+            print("Node Deleted")
+            return
+        current = current.ref
+    print("Value Not Found")
